@@ -38,7 +38,7 @@ export async function searchCarByNumber(data, number) {
   const carsList = data.cars;
   const car = carsList.find((car) => car.carNumber === number);
   if (!car) {
-    return `No car found with number #${number} in the current race.`;
+    return `Error: No car found with number #${number} in the current race.`;
   }
   return `Found car #${car.carNumber}|Driver: ${car.driverName}|Status:${car.status}`;
 }
